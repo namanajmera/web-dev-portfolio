@@ -1,0 +1,46 @@
+@import "./../../styles/variable.scss";
+
+.nav-bar {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    border-bottom  : 1px solid $accent-color-2;
+
+    .left-side {
+        display        : flex;
+        justify-content: flex-start;
+        align-items    : center;
+        width          : 50%;
+
+        .text {
+            width         : 206px;
+            font-family   : $primary-font;
+            font-size     : 18px;
+            color         : $secondry-color-2;
+            line-height   : 35px;
+            letter-spacing: 0px;
+        }
+    }
+
+    .right-side {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width          : 50%;
+
+        .text {
+            width         : 206px;
+            font-family   : $primary-font;
+            font-size     : 18px;
+            line-height   : 35px;
+            letter-spacing: 0px;
+            color         : $secondry-color-2;
+            padding       : 1.1rem;
+            border-right  : 1px solid $accent-color-2;
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 import "./App.scss";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Web Dev Project</h1>
-      <span>Naman Ajmera</span>
+      <Navbar />
     </div>
   );
 }

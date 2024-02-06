@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import "./styles/common.scss";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components";
 import {
   AboutPage,
   ContactMePage,

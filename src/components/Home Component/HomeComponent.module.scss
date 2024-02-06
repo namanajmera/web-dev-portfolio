@@ -1,0 +1,104 @@
+@import "./../../styles/variable.scss";
+
+.home-container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    border         : 1px solid red;
+
+    .left-side {
+        display        : flex;
+        justify-content: space-evenly;
+        flex-direction : column;
+        padding        : 20px;
+        height         : 50%;
+        width          : 100%;
+
+        .selfIntroduction {
+            display        : flex;
+            justify-content: center;
+            flex-direction : column;
+
+            .initial {
+                color      : #E5E9F0;
+                font-family: $primary-font;
+                font-size  : 18px;
+                font-style : normal;
+                font-weight: 450;
+                line-height: normal;
+            }
+
+            .selfName {
+                color      : #E5E9F0;
+                font-family: $primary-font;
+                font-size  : 62px;
+                font-style : normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .about-me-title {
+                color      : $accent-color-1;
+                font-family: $primary-font;
+                font-size  : 32px;
+                font-style : normal;
+                font-weight: 450;
+                line-height: normal;
+            }
+        }
+
+        .contactLinks {
+            .declarationForm {
+                color: $accent-color-2;
+
+                .dataType {
+                    color      : $accent-color-1;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .variableName {
+                    color      : $accent-color-4;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .assignmentOperator {
+                    color      : $secondry-color-3;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .value {
+                    color               : $accent-color-2;
+                    font-family         : $primary-font;
+                    font-size           : 16px;
+                    font-style          : normal;
+                    font-weight         : 500;
+                    line-height         : normal;
+                    text-decoration-line: underline;
+
+                    &:hover {
+                        color: $secondry-color-4;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-side {
+        .big_land_computer {
+            max-width : 500px;
+            max-height: 500px;
+        }
+    }
+}

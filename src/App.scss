@@ -1,12 +1,11 @@
 @import "./styles/variable.scss";
 
 .App {
-  text-align : center;
   font-family: $primary-font;
 
   .main-app-container {
-    width        : min(90%, 1400px);
-    margin-inline: auto;
-    padding      : 2rem;
+    /* width        : min(90%, 1400px);
+    margin-inline: auto; */
+    padding: 2rem 0;
   }
 }

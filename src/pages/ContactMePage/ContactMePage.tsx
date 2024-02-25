@@ -1,9 +1,10 @@
 import React from "react";
+import { ContactMeComponent } from "../../components";
 
 type Props = {};
 
 const ContactMePage = (props: Props) => {
-  return <div>ContactMePage</div>;
+  return <ContactMeComponent />;
 };
 
 export default ContactMePage;

@@ -59,8 +59,12 @@
             }
 
             .value {
-                color          : $accent-color-1;
-                text-decoration: underline;
+                color: $accent-color-1;
+
+                &:hover {
+                    cursor         : pointer;
+                    text-decoration: underline;
+                }
             }
         }
 

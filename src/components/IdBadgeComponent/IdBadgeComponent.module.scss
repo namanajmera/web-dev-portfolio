@@ -13,7 +13,7 @@
         display        : flex;
         justify-content: center;
         align-items    : center;
-        padding        : 24px;
+        padding-right  : 24px;
 
         .img-container {
             display      : flex;
@@ -29,9 +29,10 @@
 
     .self-tag {
         display        : flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items    : flex-start;
         flex-direction : column;
+        height         : 100%;
 
         .self {
             font-size  : 24px;

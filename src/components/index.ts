@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import AboutComponent from "./About Component/AboutComponent";
 import IdBadgeComponent from "./IdBadgeComponent/IdBadgeComponent";
 import ContactMeComponent from "./ContactMe Component/ContactMeComponent";
+import SelfComponent from "./Self Component/SelfComponent";
 
 export {
   HomeComponent,
@@ -10,4 +11,5 @@ export {
   AboutComponent,
   IdBadgeComponent,
   ContactMeComponent,
+  SelfComponent,
 };

@@ -1,0 +1,28 @@
+@import "./../../styles/variable.scss";
+@import "./../../styles/common.scss";
+
+.contact-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+
+    .top-container {
+        margin-bottom: 16px;
+    }
+
+    .skills-container {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-wrap      : wrap;
+
+        .skill {
+            width           : 100px;
+            height          : 100px;
+            background-color: #272727;
+            padding         : 1rem;
+            margin          : 1rem;
+        }
+    }
+}

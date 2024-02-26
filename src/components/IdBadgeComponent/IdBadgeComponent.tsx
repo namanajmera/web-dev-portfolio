@@ -50,6 +50,7 @@ const IdBadgeComponent = (props: Props) => {
                 alt=""
                 className={styles["profiles"]}
                 onClick={(event) => handleProfiles(event, ele)}
+                key={index}
               />
             ))}
           {/* <img src={facebook} alt="" className={styles["profiles"]} />

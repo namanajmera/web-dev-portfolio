@@ -87,7 +87,7 @@ const SelfComponent = (props: Props) => {
       <div className={styles["skills-container"]}>
         {skillsData &&
           skillsData.map((skillsData) => (
-            <div className={styles["skill"]}>
+            <div className={styles["skill"]} key={skillsData.id}>
               <img src={skillsData.imgUrl} alt={skillsData.altText} />
             </div>
           ))}

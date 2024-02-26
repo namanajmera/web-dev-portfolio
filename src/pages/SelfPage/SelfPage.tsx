@@ -1,9 +1,10 @@
 import React from "react";
+import { SelfComponent } from "../../components";
 
 type Props = {};
 
 const SelfPage = (props: Props) => {
-  return <div>SelfPage</div>;
+  return <SelfComponent />;
 };
 
 export default SelfPage;

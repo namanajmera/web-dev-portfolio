@@ -5,6 +5,7 @@ import IdBadgeComponent from "./IdBadgeComponent/IdBadgeComponent";
 import ContactMeComponent from "./ContactMe Component/ContactMeComponent";
 import SelfComponent from "./Self Component/SelfComponent";
 import ExperienceComponent from "./Experience Component/ExperienceComponent";
+import CardsComponent from "./CardsComponent/CardsComponent";
 
 export {
   HomeComponent,
@@ -14,4 +15,5 @@ export {
   ContactMeComponent,
   SelfComponent,
   ExperienceComponent,
+  CardsComponent,
 };

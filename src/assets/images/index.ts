@@ -15,6 +15,11 @@ import javascript from "./skills/javascript.png";
 import mysql from "./skills/mysql.png";
 import python from "./skills/python.png";
 import typescript from "./skills/typescript.png";
+import reactBox from "./experience/react-box.svg";
+import magicEdtech from "./experience/Magic_EdTech.jpg";
+import oneSilverbullet from "./experience/1silverbullet.png";
+import vue from "./experience/vuejs.svg"
+import nextjs from "./experience/next-js.svg"
 
 export {
   big_land_computer,
@@ -34,4 +39,9 @@ export {
   mysql,
   python,
   typescript,
+  reactBox,
+  magicEdtech,
+  oneSilverbullet,
+  vue,
+  nextjs,
 };

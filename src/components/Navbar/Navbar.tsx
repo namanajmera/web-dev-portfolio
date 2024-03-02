@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.scss";
 import { Link, useLocation } from "react-router-dom";
 
@@ -6,6 +6,33 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const { pathname } = useLocation();
+  const [navbarContent] = useState([
+    {
+      id: 1,
+      name: "_Hello",
+      path: "/",
+    },
+    {
+      id: 2,
+      name: "_experience",
+      path: "/experience",
+    },
+    {
+      id: 3,
+      name: "_projects",
+      path: "/project",
+    },
+    {
+      id: 4,
+      name: "_about-me",
+      path: "/about",
+    },
+    {
+      id: 5,
+      name: "_contact-me",
+      path: "/contact",
+    },
+  ]);
   return (
     <nav className={styles["nav-bar"]}>
       <div className={styles["left-side"]}>
@@ -20,36 +47,15 @@ const Navbar = (props: Props) => {
         </Link>
       </div>
       <div className={styles["right-side"]}>
-        <Link
-          to={"/"}
-          className={`${styles["text"]} ${pathname === "/" && "active-tab"}`}
-        >
-          _Hello
+        {navbarContent && navbarContent.map((nav => (
+          <Link
+          key={nav.id}
+          to={nav.path}
+          className={`${styles["text"]} ${pathname === nav.path && "active-tab"}`}
+          >
+          {nav.name}
         </Link>
-        <Link
-          to={"/project"}
-          className={`${styles["text"]} ${
-            pathname === "/project" && "active-tab"
-          }`}
-        >
-          _projects
-        </Link>
-        <Link
-          to={"/about"}
-          className={`${styles["text"]} ${
-            pathname === "/about" && "active-tab"
-          }`}
-        >
-          _about-me
-        </Link>
-        <Link
-          to={"/contact"}
-          className={`${styles["text"]} ${
-            pathname === "/contact" && "active-tab"
-          }`}
-        >
-          _contact-me
-        </Link>
+          )))}
       </div>
     </nav>
   );

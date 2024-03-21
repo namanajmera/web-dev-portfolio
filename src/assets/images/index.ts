@@ -20,6 +20,7 @@ import magicEdtech from "./experience/Magic_EdTech.jpg";
 import oneSilverbullet from "./experience/1silverbullet.png";
 import vue from "./experience/vuejs.svg"
 import nextjs from "./experience/next-js.svg"
+import close from "./close.svg";
 
 export {
   big_land_computer,
@@ -44,4 +45,5 @@ export {
   oneSilverbullet,
   vue,
   nextjs,
+  close,
 };

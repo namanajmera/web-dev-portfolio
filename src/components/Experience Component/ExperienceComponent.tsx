@@ -9,6 +9,7 @@ import {
   nextjs,
 } from "../../assets/images";
 import CardsComponent from "../CardsComponent/CardsComponent";
+import DetailsModalComponent from "./DetailsModalComponent/DetailsModalComponent";
 
 type Props = {};
 
@@ -33,7 +34,9 @@ const ExperienceComponent = (props: Props) => {
       <div className={styles["top-container"]}>
         <IdBadgeComponent />
       </div>
-      <CardsComponent cardsDetails={expcardsDetails} />
+      <CardsComponent cardsDetails={expcardsDetails} >
+        <DetailsModalComponent/>
+      </CardsComponent>
     </div>
   );
 };

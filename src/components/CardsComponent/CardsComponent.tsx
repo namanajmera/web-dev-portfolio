@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./CardsComponent.module.scss";
+import Modal from "../commonComponent/Modal/Modal";
 
 type Props = {
   cardsDetails: any;
+  children: React.ReactNode,
 };
 
-const CardsComponent = ({ cardsDetails }: Props) => {
+const CardsComponent = ({ cardsDetails,children }: Props) => {
+  const [showModal, setShowModal] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isMouseDown = useRef(false);
   const startX = useRef(0);
@@ -40,6 +43,10 @@ const CardsComponent = ({ cardsDetails }: Props) => {
       container.scrollLeft += e.deltaX;
     }
   };
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  }
   return (
     <div
       className={styles["bottom-container"]}
@@ -75,7 +82,10 @@ const CardsComponent = ({ cardsDetails }: Props) => {
                     ))}
                 </div>
                 <div className={styles["title"]}>{card.title}</div>
-                <button className={`${styles["btn"]}`}>view-details</button>
+                <button className={`${styles["btn"]}`} onClick={handleShowModal}>view-details</button>
+                {showModal && <Modal handleShowModal={handleShowModal}>
+                  {children}
+                  </Modal>}
               </div>
             </div>
           ))}

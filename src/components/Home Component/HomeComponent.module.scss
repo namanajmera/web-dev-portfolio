@@ -1,0 +1,164 @@
+@import "./../../styles/variable.scss";
+
+.home-container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    .left-side {
+        display        : flex;
+        justify-content: space-evenly;
+        flex-direction : column;
+        padding        : 20px;
+        height         : 50%;
+        width          : 100%;
+
+        .selfIntroduction {
+            display        : flex;
+            justify-content: center;
+            flex-direction : column;
+
+            .initial {
+                color      : #E5E9F0;
+                font-family: $primary-font;
+                font-size  : 18px;
+                font-style : normal;
+                font-weight: 450;
+                line-height: normal;
+            }
+
+            .selfName {
+                color      : #E5E9F0;
+                font-family: $primary-font;
+                font-size  : 62px;
+                font-style : normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .about-me-title {
+                color      : $accent-color-1;
+                font-family: $primary-font;
+                font-size  : 32px;
+                font-style : normal;
+                font-weight: 450;
+                line-height: normal;
+            }
+        }
+
+        .contactLinks {
+            .declarationForm {
+                color: $secondry-color-1;
+
+                .dataType {
+                    color      : $accent-color-1;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .variableName {
+                    color      : $accent-color-3;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .assignmentOperator {
+                    color      : $secondry-color-4;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .value {
+                    color               : $secondry-color-3;
+                    font-family         : $primary-font;
+                    font-size           : 16px;
+                    font-style          : normal;
+                    font-weight         : 500;
+                    line-height         : normal;
+                    text-decoration-line: underline;
+
+                    &:hover {
+                        color: $secondry-color-4;
+                    }
+                }
+            }
+        }
+
+        .downloads {
+            .dwn-btn {
+                display         : flex;
+                justify-content : space-evenly;
+                align-items     : center;
+                width           : 126px;
+                height          : 41px;
+                background-color: transparent;
+                border-radius   : 30px;
+                border-color    : $secondry-color-3;
+                cursor          : pointer;
+
+                .dwn-img {
+                    background-blend-mode: screen;
+                }
+
+                .dwn-text {
+                    color      : $secondry-color-4;
+                    font-family: $primary-font;
+                    font-size  : 16px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    .right-side {
+        .big_land_computer {
+            max-width : 500px;
+            max-height: 500px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+
+        .left-side {
+            justify-content: center;
+            align-items    : center;
+
+            .selfIntroduction {
+                text-align: center;
+            }
+
+            .contactLinks {
+                .declarationForm {
+                    text-align: center;
+
+                    .dataType,
+                    .variableName,
+                    .assignmentOperator,
+                    .value {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .downloads {
+                margin-top: 10px;
+            }
+        }
+
+        .right-side {
+            display: none;
+        }
+    }
+}

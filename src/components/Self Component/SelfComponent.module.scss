@@ -1,0 +1,30 @@
+@import "./../../styles/variable.scss";
+@import "./../../styles/common.scss";
+
+.contact-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    padding-top    : 3rem;
+
+    .top-container {
+        margin-bottom: 16px;
+    }
+
+    .skills-container {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-wrap      : wrap;
+        padding-top    : 3rem;
+
+        .skill {
+            width           : 100px;
+            height          : 100px;
+            background-color: #272727;
+            padding         : 1rem;
+            margin          : 1rem;
+        }
+    }
+}

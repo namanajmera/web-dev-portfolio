@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+$primary-font: 'Fira Code';
+
+$primary-color-1: #070707;
+$primary-color-2: #011221;
+
+$secondry-color-1: #607B96;
+$secondry-color-2: rgba(96, 123, 150, 50%);
+$secondry-color-3: #43D9AD;
+$secondry-color-4: #FFFFFF;
+
+$accent-color-1: #E99287;
+$accent-color-2: #1E2D3D;
+$accent-color-3: #4D5BCE;
+$accent-color-4: #7000FF;
+
+$card-btn-bg     : #1C2B3A;
+$card-btn-clr    : $secondry-color-4;
+$card-btn-bdr-rad: 0.5em;
+
+// Define a Sass function for font properties
+@function mainFont($family, $size, $weight) {
+    @return #{$family},
+    #{$size},
+    #{$weight};
+}

@@ -1,0 +1,179 @@
+@import "./../../styles/variable.scss";
+@import "./../../styles/common.scss";
+
+.contact-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+
+    .top-container {
+        margin-bottom: 16px;
+    }
+
+    .bottom-container {
+        width           : 100%;
+        height          : 400px;
+        background-color: rgba(1, 18, 33, 0.4);
+        border-radius   : 15px;
+        display         : flex;
+        justify-content : space-around;
+        padding         : 1rem;
+
+        .left {
+            display        : flex;
+            justify-content: center;
+            flex-direction : column;
+
+            .contactMe,
+            .socialMedia {
+                .key-value {
+                    margin-left: 55px;
+                }
+            }
+
+            span {
+                font-family: $primary-font;
+                font-size  : 16px;
+                color      : $secondry-color-1;
+                font-style : normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .obj {
+                color: $accent-color-4;
+            }
+
+            .curly {
+                color: $secondry-color-4;
+            }
+
+            .key {
+                color: $secondry-color-3;
+            }
+
+            .value {
+                color: $accent-color-1;
+
+                &:hover {
+                    cursor         : pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .center {
+            width           : 1px;
+            height          : 400px;
+            background-color: $accent-color-2;
+        }
+
+        .right {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            padding        : 2rem;
+
+            .thanks {
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                flex-direction : column;
+
+                p {
+                    font-family: $primary-font;
+                    font-size  : 26px;
+                    font-style : normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 820px) {
+        .bottom-container {
+            flex-direction: column;
+            height        : auto;
+            padding       : 0.75rem;
+
+            .center {
+                display: none;
+            }
+
+            .left,
+            .right {
+                width  : 100%;
+                padding: 1rem 0;
+
+                .contactMe,
+                .socialMedia {
+                    .key-value {
+                        margin-left: 30px;
+                    }
+                }
+
+                .thanks {
+                    p {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .bottom-container {
+            padding: 0.5rem;
+
+            .left,
+            .right {
+
+                .contactMe,
+                .socialMedia {
+                    .key-value {
+                        margin-left: 20px;
+                    }
+                }
+
+                .thanks {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .top-container {
+            margin-bottom: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .bottom-container {
+            padding: 0.25rem;
+
+            .left,
+            .right {
+
+                .contactMe,
+                .socialMedia {
+                    .key-value {
+                        margin-left: 15px;
+                    }
+                }
+
+                .thanks {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .top-container {
+            margin-bottom: 8px;
+        }
+    }
+}

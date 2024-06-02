@@ -33,6 +33,13 @@ const Navbar = (props: Props) => {
       path: "/contact",
     },
   ]);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className={styles["nav-bar"]}>
       <div className={styles["left-side"]}>
@@ -46,16 +53,27 @@ const Navbar = (props: Props) => {
           &lt; namanAjmera /&gt;
         </Link>
       </div>
-      <div className={styles["right-side"]}>
-        {navbarContent && navbarContent.map((nav => (
-          <Link
-          key={nav.id}
-          to={nav.path}
-          className={`${styles["text"]} ${pathname === nav.path && "active-tab"}`}
-          >
-          {nav.name}
-        </Link>
-          )))}
+      <div className={styles["hamburger"]} onClick={toggleMobileMenu}>
+        &#9776;
+      </div>
+      <div
+        className={`${styles["right-side"]} ${
+          isMobileMenuOpen ? styles["open"] : ""
+        }`}
+      >
+        {navbarContent &&
+          navbarContent.map((nav) => (
+            <Link
+              key={nav.id}
+              to={nav.path}
+              className={`${styles["text"]} ${
+                pathname === nav.path && "active-tab"
+              }`}
+              onClick={toggleMobileMenu}
+            >
+              {nav.name}
+            </Link>
+          ))}
       </div>
     </nav>
   );

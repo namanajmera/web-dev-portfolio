@@ -19,13 +19,17 @@ const ExperienceComponent = (props: Props) => {
       title: "Magic EdTech",
       imgUrl: magicEdtech,
       techUsed: [reactBox, vue, nextjs],
-      exp:"2 yrs 9 mos",
-      location:"Noida, Uttar Pradesh, India",
+      exp: "2 yrs 9 mos",
+      location: "Noida, Uttar Pradesh, India",
       expsDetails: [
         {
           title: "Consultant",
           type: "Full-time",
           period: "Apr 2023 - Dec 2023 · 9 mos",
+          startMonth: "Apr",
+          startYear: 2023,
+          endMonth: "Dec",
+          endYear: 2023,
           details: "Hybrid",
           skills: [
             "Next Js",
@@ -39,6 +43,10 @@ const ExperienceComponent = (props: Props) => {
           title: "Senior Associate",
           type: "Full-time",
           period: "Apr 2022 - Apr 2023 · 1 yr 1 mo",
+          startMonth: "Apr",
+          startYear: 2023,
+          endMonth: "Apr",
+          endYear: 2023,
           details:
             "Working as a Front End Developer by using Vue Js Developer and React Js Developer.",
           skills: [
@@ -55,6 +63,10 @@ const ExperienceComponent = (props: Props) => {
           title: "Associate Software Engineer",
           type: "Full-time",
           period: "Aug 2021 - Apr 2022 · 9 mos",
+          startMonth: "Aug",
+          startYear: 2021,
+          endMonth: "Apr",
+          endYear: 2022,
           details: "",
           responsibilities: [
             "Promoted to Associate Software Engineer after successful training.",
@@ -79,6 +91,10 @@ const ExperienceComponent = (props: Props) => {
           title: "Software Trainee",
           type: "Apprenticeship",
           period: "Apr 2021 - Aug 2021 · 5 mos",
+          startMonth: "Apr",
+          startYear: 2021,
+          endMonth: "Aug",
+          endYear: 2021,
           details: "",
           responsibilities: [
             "Understanding project requirements and completing all duties assigned by the Supervisor.",
@@ -94,13 +110,17 @@ const ExperienceComponent = (props: Props) => {
       title: "1Silverbullet.tech",
       imgUrl: oneSilverbullet,
       techUsed: [reactBox, vue],
-      exp:"6 months",
-      location:"Pune, Maharashtra, India",
+      exp: "Dec 2023 - Present",
+      location: "Pune, Maharashtra, India",
       expsDetails: [
         {
-          title: "Software Development Engineer - 1",
+          title: "Software Development Engineer - I",
           type: "Full-time",
-          period: "Dec 2023 - present 6 months",
+          period: "Dec 2023 - Present 6 months",
+          startMonth: "Dec",
+          startYear: 2023,
+          endMonth: "Present",
+          endYear: "",
           details: "Hybrid",
           skills: [
             "Next Js",

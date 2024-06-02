@@ -71,7 +71,7 @@
         }
 
         .right-side {
-            width         : 100%;
+            width         : 90%;
             flex-direction: column;
             display       : none;
 
@@ -80,7 +80,7 @@
             }
 
             .text {
-                width     : 100%;
+                width     : fit-content;
                 border    : none;
                 text-align: center;
                 padding   : 1rem;

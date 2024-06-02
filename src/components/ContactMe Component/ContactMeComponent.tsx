@@ -45,7 +45,7 @@ const ContactMeComponent = (props: Props) => {
                 className={styles["value"]}
                 onClick={() => handleMail("cool.naman.ajmera@gmail.com")}
               >
-                {"'cool.naman.ajmera@gmail.com;,'"}
+                {"'cool.naman.ajmera@gmail.com,'"}
               </span>
             </p>
             <p className={styles["key-value"]}>
@@ -54,7 +54,7 @@ const ContactMeComponent = (props: Props) => {
                 className={styles["value"]}
                 onClick={() => handleCall(8696696426)}
               >
-                {"+91-8696696426;,"}
+                {"+91-8696696426,"}
               </span>
             </p>
             <p>
@@ -72,7 +72,7 @@ const ContactMeComponent = (props: Props) => {
                 className={styles["value"]}
                 onClick={() => handleLink("insta")}
               >
-                {" '@hackerNaman';,"}
+                {" '@hackerNaman',"}
               </span>
             </p>
             <p className={styles["key-value"]}>
@@ -81,7 +81,7 @@ const ContactMeComponent = (props: Props) => {
                 className={styles["value"]}
                 onClick={() => handleLink("github")}
               >
-                {" '@namanAjmera';,"}
+                {" '@namanAjmera',"}
               </span>
             </p>
             <p className={styles["key-value"]}>
@@ -90,7 +90,7 @@ const ContactMeComponent = (props: Props) => {
                 className={styles["value"]}
                 onClick={() => handleLink("linkedIn")}
               >
-                {" '@namanAjmera';,"}
+                {" '@namanAjmera',"}
               </span>
             </p>
             <p>

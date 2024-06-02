@@ -127,4 +127,38 @@
             max-height: 500px;
         }
     }
+
+    @media (max-width: 768px) {
+
+
+        .left-side {
+            justify-content: center;
+            align-items    : center;
+
+            .selfIntroduction {
+                text-align: center;
+            }
+
+            .contactLinks {
+                .declarationForm {
+                    text-align: center;
+
+                    .dataType,
+                    .variableName,
+                    .assignmentOperator,
+                    .value {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .downloads {
+                margin-top: 10px;
+            }
+        }
+
+        .right-side {
+            display: none;
+        }
+    }
 }

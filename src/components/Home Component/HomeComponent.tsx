@@ -8,21 +8,21 @@ const HomeComponent = (props: Props) => {
   const [profileVisit] = useState([
     {
       id: 1,
-      title: "githubLink",
+      title: "github",
       link: "https://github.com/namanAjmera",
       userName: "@namanAjmera",
       tag: "GitHub/@namanAjmera",
     },
     {
       id: 2,
-      title: "linkedInLink",
+      title: "linkedIn",
       link: "https://linkedin.com/in/namanajmera",
       userName: "@namanajmera",
       tag: "LinkedIn/@namanAjmera",
     },
     {
       id: 3,
-      title: "leetCodeLink",
+      title: "leetCode",
       link: "https://leetcode.com/namanAjmera",
       userName: "@namanAjmera",
       tag: "Leetcode/@namanAjmera",

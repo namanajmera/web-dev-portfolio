@@ -5,6 +5,7 @@ import { Navbar } from "./components";
 import {
   AboutPage,
   ContactMePage,
+  ExperiencePage,
   HomePage,
   ProjectPage,
   SelfPage,
@@ -17,6 +18,7 @@ function App() {
       <div className="main-app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/project" element={<ProjectPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactMePage />} />

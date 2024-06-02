@@ -1,0 +1,13 @@
+@import "./../../styles/variable.scss";
+@import "./../../styles/common.scss";
+
+.exp-container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+
+    .top-container {
+        margin-bottom: 16px;
+    }
+}

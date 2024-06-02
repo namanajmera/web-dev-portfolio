@@ -17,11 +17,11 @@ const Navbar = (props: Props) => {
       name: "_experience",
       path: "/experience",
     },
-    {
+    /* {
       id: 3,
       name: "_projects",
       path: "/project",
-    },
+    }, */
     {
       id: 4,
       name: "_about-me",

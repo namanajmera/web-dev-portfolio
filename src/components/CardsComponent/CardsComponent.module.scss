@@ -113,4 +113,55 @@
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        height : auto;
+        padding: 0.5rem;
+
+        .cards {
+            .card-details {
+                flex     : 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cards {
+            .card-details {
+                flex         : 0 0 calc(100% - 20px);
+                max-width    : calc(100% - 20px);
+                margin-right : 0;
+                margin-bottom: 10px;
+
+                .card {
+                    width: 100%;
+
+                    .expImg {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cards {
+            .card-details {
+                padding: 10px;
+
+                .card {
+                    .title {
+                        font-size: 14px;
+                    }
+
+                    .btn {
+                        width    : 120px;
+                        height   : 35px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
 }

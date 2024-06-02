@@ -119,7 +119,7 @@ const ExperienceComponent = (props: Props) => {
         <IdBadgeComponent />
       </div>
       <CardsComponent cardsDetails={expcardsDetails}>
-        <DetailsModalComponent modalData={expcardsDetails}/>
+        <DetailsModalComponent />
       </CardsComponent>
     </div>
   );

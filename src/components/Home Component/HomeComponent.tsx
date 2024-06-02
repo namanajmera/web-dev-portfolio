@@ -32,7 +32,7 @@ const HomeComponent = (props: Props) => {
   const downloadResume = () => {
     const aTag = document.createElement("a");
     aTag.href =
-      "https://drive.google.com/file/d/1NjkF_sB0abVAGa6SBQvNABATMuq2CKCM/view?usp=sharing";
+      "https://drive.google.com/file/d/1D9_jPUZdrUv_a0FwZFNlD_NCtXqbzREl/view?usp=sharing";
     aTag.target = "_blank";
     aTag.download = "Naman's Resume.pdf";
     aTag.click();
@@ -70,7 +70,7 @@ const HomeComponent = (props: Props) => {
         <div className={styles["downloads"]}>
           <button className={styles["dwn-btn"]} onClick={downloadResume}>
             <img src={download} alt="" className={styles["dwn-img"]} />
-            <span className={styles["dwn-text"]}>_Resume</span>
+            <span className={styles["dwn-text"]}>_resume</span>
           </button>
         </div>
       </div>

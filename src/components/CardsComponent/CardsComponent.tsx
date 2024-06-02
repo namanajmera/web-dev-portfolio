@@ -7,8 +7,8 @@ type Props = {
   children: ReactElement | ReactElement[];
 };
 
-const CardsComponent = ({ cardsDetails,children }: Props) => {
-  const [showModal, setShowModal] = useState(false);
+const CardsComponent = ({ cardsDetails, children }: Props) => {
+  const [showModal, setShowModal] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isMouseDown = useRef(false);
   const startX = useRef(0);
@@ -44,9 +44,10 @@ const CardsComponent = ({ cardsDetails,children }: Props) => {
     }
   };
 
-  const handleShowModal = () => {
-    setShowModal(!showModal);
-  }
+  const handleShowModal = (index: number | null) => {
+    setShowModal(index);
+  };
+
   return (
     <div
       className={styles["bottom-container"]}
@@ -82,10 +83,20 @@ const CardsComponent = ({ cardsDetails,children }: Props) => {
                     ))}
                 </div>
                 <div className={styles["title"]}>{card.title}</div>
-                <button className={`${styles["btn"]}`} onClick={handleShowModal}>view-details</button>
-                {showModal && <Modal handleShowModal={handleShowModal} modalData={cardsDetails[index]} >
-                  {children}
-                  </Modal>}
+                <button
+                  className={styles["btn"]}
+                  onClick={() => handleShowModal(index)}
+                >
+                  View Details
+                </button>
+                {showModal === index && (
+                  <Modal
+                    handleShowModal={() => handleShowModal(null)}
+                    modalData={card}
+                  >
+                    {children}
+                  </Modal>
+                )}
               </div>
             </div>
           ))}

@@ -6,7 +6,6 @@ type Props = {
 };
 
 const DetailsModalComponent = ({ modalData }: Props) => {
-  console.log(modalData);
   return (
     <div className={styles["experience-container"]}>
       <div className={styles["job"]}>

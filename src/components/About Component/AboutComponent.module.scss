@@ -19,17 +19,6 @@
         flex-direction  : column;
         padding         : 1rem;
 
-        /* .counting {
-            .count {
-                list-style : none;
-                font-family: $primary-font;
-                font-size  : 26px;
-                color      : $secondry-color-1;
-                font-style : normal;
-                font-weight: 200;
-                line-height: normal;
-            }
-        } */
         .import-statement {
             font-family: $primary-font;
             font-size  : 26px;
@@ -69,4 +58,69 @@
         }
     }
 
+    @media (max-width: 822px) {
+        .bottom-container {
+            height : auto;
+            padding: 0.75rem;
+
+            .import-statement {
+                font-size: 22px;
+            }
+
+            .me-text {
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        .bottom-container {
+            height : auto;
+            padding: 0.5rem;
+
+            .import-statement {
+                font-size: 20px;
+            }
+
+            .me-text {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        .bottom-container {
+            height : auto;
+            padding: 0.25rem;
+
+            .import-statement {
+                font-size: 18px;
+                display  : flex;
+                flex-wrap: wrap;
+
+                span {
+                    display: inline-block;
+                    margin : 0 2px;
+                }
+            }
+
+            .me-text {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }

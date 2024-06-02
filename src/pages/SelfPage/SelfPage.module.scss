@@ -14,6 +14,7 @@
             background-position: center top;
             background-size    : cover;
             background-image   : url("~../../assets/images/clouds.png");
+            pointer-events     : none;
         }
 
         &.bottom {
@@ -21,6 +22,7 @@
             background-position: left;
             left               : -155px;
             background-image   : url("~../../assets/images/landtubo.png");
+            pointer-events     : none;
             background-size    : contain;
             background-repeat  : no-repeat;
         }

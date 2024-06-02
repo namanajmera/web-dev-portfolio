@@ -11,6 +11,7 @@ const CardsComponent = ({ cardsDetails, children }: Props) => {
   const [showModal, setShowModal] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isMouseDown = useRef(false);
+  const isTouching = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
 
@@ -29,6 +30,25 @@ const CardsComponent = ({ cardsDetails, children }: Props) => {
 
     const x = e.pageX - containerRef.current!.offsetLeft;
     const walk = (x - startX.current) * 2; // Adjust the multiplier as needed
+
+    containerRef.current!.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    isTouching.current = true;
+    startX.current = e.touches[0].pageX - containerRef.current!.offsetLeft;
+    scrollLeft.current = containerRef.current!.scrollLeft;
+  };
+
+  const handleTouchEnd = () => {
+    isTouching.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isTouching.current) return;
+
+    const x = e.touches[0].pageX - containerRef.current!.offsetLeft;
+    const walk = (x - startX.current) * 2;
 
     containerRef.current!.scrollLeft = scrollLeft.current - walk;
   };
@@ -55,6 +75,9 @@ const CardsComponent = ({ cardsDetails, children }: Props) => {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onMouseMove={handleMouseMove}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchMove={handleTouchMove}
     >
       <div
         className={styles["cards"]}

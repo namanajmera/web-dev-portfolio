@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, ReactElement } from "react";
 import styles from "./CardsComponent.module.scss";
 import Modal from "../commonComponent/Modal/Modal";
 
 type Props = {
   cardsDetails: any;
-  children: React.ReactNode,
+  children: ReactElement | ReactElement[];
 };
 
 const CardsComponent = ({ cardsDetails,children }: Props) => {
@@ -83,7 +83,7 @@ const CardsComponent = ({ cardsDetails,children }: Props) => {
                 </div>
                 <div className={styles["title"]}>{card.title}</div>
                 <button className={`${styles["btn"]}`} onClick={handleShowModal}>view-details</button>
-                {showModal && <Modal handleShowModal={handleShowModal}>
+                {showModal && <Modal handleShowModal={handleShowModal} modalData={cardsDetails[index]} >
                   {children}
                   </Modal>}
               </div>

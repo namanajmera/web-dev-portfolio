@@ -50,7 +50,7 @@ const HomeComponent = (props: Props) => {
         <div className={styles["contactLinks"]}>
           {profileVisit &&
             profileVisit.map((ele, index) => (
-              <p className={styles["declarationForm"]}>
+              <p className={styles["declarationForm"]} key={index}>
                 <span className={styles["dataType"]}> {"const"} </span>
                 <span className={styles["variableName"]}> {ele.title} </span>
                 <span className={styles["assignmentOperator"]}> {"="} </span>

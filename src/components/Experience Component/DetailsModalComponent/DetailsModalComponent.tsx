@@ -10,10 +10,7 @@ const DetailsModalComponent = ({ modalData }: Props) => {
   return (
     <div className={styles["experience-container"]}>
       <div className={styles["job"]}>
-        <img
-          src={modalData.imgUrl}
-          alt={modalData.title}
-        />
+        <img src={modalData.imgUrl} alt={modalData.title} />
         <div className={styles["job-details"]}>
           <h2>{modalData.title}</h2>
           <p>{modalData.exp}</p>
@@ -25,7 +22,15 @@ const DetailsModalComponent = ({ modalData }: Props) => {
         <div className={styles["position"]} key={index}>
           <h3>{position.title}</h3>
           <p>{position.type}</p>
-          <p>{position.period}</p>
+          <p>
+            {position.startMonth +
+              ", " +
+              position.startYear +
+              " - " +
+              position.endMonth +
+              ", " +
+              position.endYear}
+          </p>
           <p>{position.details}</p>
           {position.skills && position.skills.length > 0 && (
             <p>

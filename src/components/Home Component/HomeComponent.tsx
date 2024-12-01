@@ -32,7 +32,7 @@ const HomeComponent = (props: Props) => {
   const downloadResume = () => {
     const aTag = document.createElement("a");
     aTag.href =
-      "https://drive.google.com/file/d/1D9_jPUZdrUv_a0FwZFNlD_NCtXqbzREl/view?usp=sharing";
+      "https://drive.google.com/file/d/1B8tAgyy6yLeXDwmYrDGwz3di04bvyOP7/view?usp=sharing";
     aTag.target = "_blank";
     aTag.download = "Naman's Resume.pdf";
     aTag.click();
